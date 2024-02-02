@@ -1,0 +1,117 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    cursor: pointer;
+    animation: despreencher 1s;
+}
+
+@keyframes despreencher {
+    0% {
+        background: url("../assets/Menu\ Aberto.svg") no-repeat center;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    100% {
+        background: url(../assets/Menu.svg) no-repeat center;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.preencher {
+    background: url("../assets/Menu\ Aberto.svg") no-repeat center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    animation: preencher 1s;
+}
+
+@keyframes preencher {
+    0% {
+        background: url(../assets/Menu.svg) no-repeat center;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    100% {
+        background: url("../assets/Menu\ Aberto.svg") no-repeat center;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.container__imagem {
+   padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 35vw;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+    word-wrap: break-word;
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    text-decoration: none;
+    background: var(--azul);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.lista-menu__item:hover {
+    background: #EBECEE;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    
+}
